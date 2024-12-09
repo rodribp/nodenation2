@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('confirmation-invoice-out-paid').classList.add('hidden');
                 document.getElementById('invoice-slot').classList.remove('hidden');
                 document.getElementById('confirmation-invoice-in-paid').classList.add('hidden');
+                document.getElementById('create-invoice-amount').value = '';
+                document.getElementById('create-invoice-memo').value = '';
             });
         });
     });
