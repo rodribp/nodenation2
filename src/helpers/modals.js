@@ -1,3 +1,10 @@
+//buttons
+const receiveButton = document.getElementById('receive-button');
+const sendButton = document.getElementById('send-button');
+
+//modals
+const generateInvoiceModal = document.getElementById('create-invoice-modal');
+const pasteInvoiceModal = document.getElementById('paste-invoice-modal');
 // archivo js para manejar los modals
 document.addEventListener('DOMContentLoaded', () => {
     const modals = document.querySelectorAll('.modal');
@@ -38,3 +45,11 @@ export function openModal(modalElement) {
 
     console.error(`Modal element ${modal} not found.`)
 }
+
+sendButton.addEventListener('click', (e) => {
+    openModal(pasteInvoiceModal);
+})
+
+receiveButton.addEventListener('click', (e) => {
+    openModal(generateInvoiceModal);
+})

@@ -1,16 +1,12 @@
 import { openModal } from "./helpers/modals.js";
 //buttons
-const receiveButton = document.getElementById('receive-button');
-const sendButton = document.getElementById('send-button');
 const genInvoiceButton = document.getElementById('generate-invoice-button');
 const readInvoiceButton = document.getElementById('read-invoice-button');
 const payInvoiceButton = document.getElementById('pay-invoice-button');
 const closeInvoiceModal = document.getElementById('close-pay-modal');
 
 //modals
-const generateInvoiceModal = document.getElementById('create-invoice-modal');
 const showInvoiceModal = document.getElementById('show-invoice-modal');
-const pasteInvoiceModal = document.getElementById('paste-invoice-modal');
 const payInvoiceModal = document.getElementById('pay-invoice-modal');
 
 //fields
@@ -25,16 +21,8 @@ const memoDetails = document.getElementById('memoDetails');
 const inPaid = document.getElementById('confirmation-invoice-in-paid');
 const outPaid = document.getElementById('confirmation-invoice-out-paid');
 
-receiveButton.addEventListener('click', (e) => {
-    openModal(generateInvoiceModal);
-})
-
 genInvoiceButton.addEventListener('click', (e) => {
     openModal(showInvoiceModal);
-})
-
-sendButton.addEventListener('click', (e) => {
-    openModal(pasteInvoiceModal);
 })
 
 readInvoiceButton.addEventListener('click', (e) => {
